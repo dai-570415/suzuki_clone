@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+/* font-family: 'Noto Sans JP', sans-serif; */
+/*@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');*/
+/* font-family: 'Sawarabi Gothic', sans-serif; */
+/*@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap');*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+:root {
+  --black: #2f2f2f;
+  --white: #fff;
+  --red: #f83038;
+}
+
+body {
+  overflow-x: hidden;
+  background: #fff;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}/*# sourceMappingURL=style.css.map */

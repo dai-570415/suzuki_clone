@@ -1,0 +1,246 @@
+.hero {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(#1c1c1c, #323232);
+    &::before {
+        content: "Adventure";
+        font-size: 16vw;
+        font-weight: 700;
+        color: rgba(255,255,255,0.05);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 40px;
+        .logo {
+            max-width: 80px;
+        }
+        .navigation {
+            display: none;
+        }
+    }
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 120px 0 0 0;
+        position: relative;
+        z-index: 1;
+        h2 {
+            text-align: center;
+            font-size: 48px;
+            font-weight: 300;
+            color: var(--white);
+            margin: 0 0 20px 0;
+            span {
+                font-weight: 700;
+            }
+        }
+        .btn {
+            display: inline-block;
+            font-size: 20px;
+            color: var(--white);
+            margin: 0 0 40px 0;
+            padding: 16px 36px;
+            border-radius: 50px;
+            background: var(--red);
+            transition: 0.25s;
+            &:hover {
+                letter-spacing: 4px;
+            }
+        }
+        .bike {
+            max-width: 80%;
+        }
+    }
+    .slider {
+        .slides {
+            width: 100%;
+            position: absolute;
+            left: 50%;
+            transition: 0.25s;
+            transform: translateX(-50%);
+            z-index: 10;
+            opacity: 0;
+            pointer-events: none;
+            h2 {
+                text-align: center;
+                font-size: 40px;
+                color: var(--white);
+                span {
+                    font-size: 16px;
+                    font-weight: 400;
+                    font-style: italic;
+                    color: var(--red);
+                }
+            }
+        }
+        .slides.active {
+            opacity: 1;
+        }
+    }
+    .bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column-reverse;
+        width: 100%;
+        padding: 30px 100px;
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        .sns {
+            display: flex;
+            justify-content: flex-start;
+            li {
+                margin: 0 20px 0 0;
+                a {
+                    font-size: 32px;
+                    color: var(--white);
+                    transition: 0.25s;
+                    &:hover {
+                        color: var(--red);
+                    }
+                }
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+        .dots {
+            display: flex;
+            justify-content: center;
+            margin: 0 0 80px 0;
+            .dot {
+                width: 10px;
+                height: 10px;
+                margin: 0 20px 0 0;
+                background: rgba(255,255,255,0.2);
+                border-radius: 50%;
+                cursor: pointer;
+                &:last-child {
+                    margin: 0;
+                }
+            }
+            .dot.active {
+                background: var(--white);
+            }
+        }
+    }
+}
+@media screen and (min-width:768px) {
+    .hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .navigation {
+                display: flex;
+                li {
+                    a {
+                        position: relative;
+                        color: var(--white);
+                        margin: 0 0 0 40px;
+                        transition: 0.25s;
+                        &:hover {
+                            color: var(--red);
+                        }
+                    }
+                }
+            }
+        }
+        .slider {
+            .slides {
+                display: flex;
+                justify-content: space-between;
+                padding: 0 40px;
+                top: 60%;
+                left: 0;
+                transform: translateY(-50%);
+                h2 {
+                    text-align: left;
+                    &:last-child {
+                        text-align: end;
+                    }
+                }
+            }
+            .slides.active {
+                top: 50%;
+            }
+        }
+        .bottom {
+            flex-direction: row;
+            width: 100%;
+            padding: 30px 40px;
+            .dots {
+                margin: 0;
+            }
+        }
+    }
+}
+@media screen and (min-width:1024px) {
+    .hero {
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 1000px;
+            margin: 0 auto;
+            padding: 30px 0;
+            position: static;
+        }
+        .content {
+            padding: 100px 0 0 0;
+            h2 {
+                font-size: 80px;
+            }
+            .bike {
+                max-width: 70%;
+                position: relative;
+                bottom: 24px;
+            }
+        }
+        .bottom {
+            width: 1000px;
+            margin: 0 auto;
+            padding: 30px 0;
+            position: static;
+            .dots {
+                .dot {
+                    margin: 0 20px 0 0;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:1366px) {
+    .hero {
+        .content {
+            .bike {
+                max-width: 80%;
+            }
+        }
+        .slider {
+            .slides {
+                padding: 0 100px;
+                h2 {
+                    font-size: 56px;
+                    span {
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
